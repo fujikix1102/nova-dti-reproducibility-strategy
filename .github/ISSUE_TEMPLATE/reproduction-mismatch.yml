@@ -1,0 +1,29 @@
+name: Reproduction mismatch or blocked run
+description: Report a mismatch, missing input, environment issue, or failure.
+title: "Reproduction mismatch: "
+labels: [reproduction, mismatch]
+body:
+  - type: markdown
+    attributes:
+      value: "A mismatch is valuable. Do not silently repair the frozen inputs or upload restricted data."
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, architecture, Docker version, image ID, and runtime.
+    validations:
+      required: true
+  - type: textarea
+    id: mismatch
+    attributes:
+      label: Mismatch or failure
+      description: State the first failing check, expected value, actual value, and exit code.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Paste verifier output and a redacted error log.
+    validations:
+      required: true

@@ -1,0 +1,30 @@
+name: reproducibility-contract
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  static-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile runner and verifier
+        run: python -m py_compile work/run_representative_case.py work/verify_representative_case.py
+      - name: Confirm missing archive fails closed
+        run: |
+          set +e
+          python work/run_representative_case.py \
+            --code-dir /tmp/missing-code \
+            --base-dir /tmp/missing-data \
+            --log /tmp/repro-contract-log.json
+          test "$?" -eq 2
+          python - <<'PY'
+          import json
+          p = json.load(open('/tmp/repro-contract-log.json'))
+          assert p['status'] == 'BLOCKED_MISSING_INPUT_OR_CODE'
+          assert p['formal_pass_expected'] is False
+          PY

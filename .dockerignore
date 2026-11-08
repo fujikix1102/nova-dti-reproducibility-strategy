@@ -1,0 +1,4 @@
+.git
+work/*.json
+outputs
+__pycache__

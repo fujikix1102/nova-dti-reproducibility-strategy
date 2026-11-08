@@ -1,0 +1,15 @@
+# Do not publish source data or local staging/output copies.
+*.csv
+*.HDF5
+*.h5
+*.nc
+*.zip
+*.tar.gz
+.DS_Store
+__pycache__/
+work/*.json
+work/ci-contract-log.json
+work/run_log*.json
+work/docker-*/
+work/github-public-repo-*/
+outputs/public-release-*/

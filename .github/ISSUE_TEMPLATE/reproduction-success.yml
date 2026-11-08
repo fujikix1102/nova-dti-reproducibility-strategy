@@ -1,0 +1,29 @@
+name: Reproduction success
+description: Report a run that matches the frozen contract.
+title: "Reproduction success: "
+labels: [reproduction, verified]
+body:
+  - type: markdown
+    attributes:
+      value: "Please do not upload restricted data, credentials, or private personal information."
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, architecture, Docker version, image ID, and runtime.
+    validations:
+      required: true
+  - type: textarea
+    id: results
+    attributes:
+      label: Results
+      description: Records, groups, events, stations, bootstrap count, seed, exit code, and SHA-256 values.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Paste or attach the verifier JSON and a redacted log.
+    validations:
+      required: true
