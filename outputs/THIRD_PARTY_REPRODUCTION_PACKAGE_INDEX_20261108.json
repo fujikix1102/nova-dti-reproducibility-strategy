@@ -1,0 +1,48 @@
+{
+  "package_id": "jma-gpm-v2-third-party-reproduction-20261108",
+  "status": "PACKAGE_COMPLETE_FOR_FIXED_DOCKER_PATH",
+  "claim_boundary": "This package reproduces a corrected exploratory comparison. It is not calibration, formal validation, causal inference, observational discovery, or a third-party independent execution.",
+  "formal_pass": false,
+  "original_baseline": {
+    "records": 81,
+    "event_station_groups": 27,
+    "events": 3,
+    "stations": 9,
+    "bootstrap_replicates": 2000,
+    "preservation": "Original source data, prior output, and prior logs remain outside the new Docker staging directory and were not overwritten."
+  },
+  "fixed_manifest": "docker-seeded-reproduction-manifest-20261108.json",
+  "frozen_execution_records": [
+    "VERIFIED_DOCKER_EXECUTION_RECORD_20261108.json",
+    "VERIFIED_DOCKER_EXECUTION_RECORD_20261108-rerun-001.json"
+  ],
+  "environment": {
+    "route": "Docker only",
+    "image": "nova-dti-jma-gpm:2026-11-08",
+    "image_id": "sha256:95b3a0735f8104ed500a8e38041b68809152c5b9aa51bbc0f20694020e7c2262",
+    "base_image": "python:3.12.8-slim-bookworm",
+    "python": "3.12.8"
+  },
+  "seed": 20261108,
+  "execution_order": [
+    "recompute_jma_gpm_v2.py",
+    "bootstrap_v2_seeded.py",
+    "downstream_v2.py"
+  ],
+  "comparison_policy": {
+    "structure": "exact equality for counts and boolean contract fields",
+    "hashes": "exact SHA-256 equality for fixed input, code, and output artifacts",
+    "csv_and_json_outputs": "byte-for-byte equality for the two Docker runs",
+    "numeric_tolerance": "0 for frozen byte outputs; no tolerance comparison was needed",
+    "future_numeric_extensions": "relative tolerance 1e-12 and absolute tolerance 1e-12 unless a future manifest explicitly overrides it"
+  },
+  "artifacts": {
+    "readme": "../README.md",
+    "dockerfile": "../Dockerfile",
+    "manifest": "docker-seeded-reproduction-manifest-20261108.json",
+    "comparison": "docker-seeded-reproduction-report-20261108.md",
+    "verifier": "../work/verify_manifest.py",
+    "freeze_tool": "../work/freeze_execution_record.py"
+  },
+  "release_rule": "Do not overwrite frozen records or manifests. Add a new package index or record ID for every changed input, code, environment, seed, or output."
+}

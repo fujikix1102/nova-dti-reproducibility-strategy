@@ -1,0 +1,30 @@
+{
+  "record_type": "verified_third_party_reproduction_docker_execution",
+  "record_id": "20261108-rerun-001",
+  "frozen_at": "2026-11-07T23:59:31.976684+00:00",
+  "verification_status": "PASS",
+  "formal_pass": false,
+  "source_manifest": "outputs/docker-seeded-reproduction-manifest-20261108.json",
+  "manifest_sha256": "625b554ed5df1aa4971e7d4366c2b4822a8bf87b371205b19eb82d1fea291f68",
+  "manifest_case_id": "jma-gpm-v2-docker-seeded-20261108",
+  "docker": {
+    "tag": "nova-dti-jma-gpm:2026-11-08",
+    "image_id": "sha256:95b3a0735f8104ed500a8e38041b68809152c5b9aa51bbc0f20694020e7c2262",
+    "base": "python:3.12.8-slim-bookworm"
+  },
+  "contract": {
+    "matched_daily_records": 81,
+    "event_station_groups": 27,
+    "events": 3,
+    "stations": 9,
+    "bootstrap_replicates": 2000,
+    "formal_pass": false
+  },
+  "evidence_sha256": {
+    "outputs/docker-seeded-reproduction-report-20261108.md": "160e818eb7657055cc1f41c5eb23460502692485f4b4afd2de43b44fb44545cf",
+    "work/docker-seeded-repro-20261108/docker-run-log-1.json": "890bd9adeb347191c758e4d5238ca6093fcf52a1158e1d9467cc1e2f428c6877",
+    "work/docker-seeded-repro-20261108/docker-run-log-2.json": "72b64ba5e0091ae562f1d29c94e185239b2e36f4126502fc701b26f36a5ceb1c",
+    "work/verify_manifest.py": "827fc3779f85fef458fd7546d8c7ad2c62785384433487311216dcc8b1d0c53e"
+  },
+  "freeze_rule": "Append-only. Never overwrite an existing record; use a new record ID for every execution."
+}

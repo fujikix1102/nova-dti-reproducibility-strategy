@@ -1,0 +1,43 @@
+{
+  "record_type": "verified_third_party_reproduction_docker_execution",
+  "record_id": "jma-gpm-v2-docker-seeded-20261108",
+  "frozen_at": "2026-11-08T08:00:00+09:00",
+  "verification_status": "PASS",
+  "formal_pass": false,
+  "claim_boundary": "Fixed-environment exploratory reproduction only; not calibration, formal validation, causal inference, or observational discovery.",
+  "docker": {
+    "tag": "nova-dti-jma-gpm:2026-11-08",
+    "image_id": "sha256:95b3a0735f8104ed500a8e38041b68809152c5b9aa51bbc0f20694020e7c2262",
+    "base_image": "python:3.12.8-slim-bookworm",
+    "python": "3.12.8"
+  },
+  "contract": {
+    "matched_daily_records": 81,
+    "event_station_groups": 27,
+    "events": 3,
+    "stations": 9,
+    "bootstrap_replicates": 2000,
+    "random_seed": 20261108
+  },
+  "verified_sha256": {
+    "input_jma": "e3cdb24f08f8bd65f5ffafac40d771592869fd1843999f0cbd6510739c7eb7f9",
+    "input_gpm": "6d7b1e467c293da2966c200a60d6f9e3639e1ccf7702fd0076c84e1e305a7a86",
+    "code_recompute": "b9a346164abdb6e2ed8cdf1727fc71f92aca3e35b444a34827215b95327dea47",
+    "code_bootstrap_seeded": "435e38945343aa8f6e775c0f553b88df6cd78d39eccc94cb911cc93506d0e110",
+    "code_downstream": "761e6aeb6a6a7e91d344ef3d920d1677b462a54102d04ebf8a2267a2bcc52e3d",
+    "output_bootstrap": "d554b1856868d38ad12577b679ad34709c46b12facc99dfb3d57ed768822e201",
+    "manifest": "625b554ed5df1aa4971e7d4366c2b4822a8bf87b371205b19eb82d1fea291f68",
+    "report": "160e818eb7657055cc1f41c5eb23460502692485f4b4afd2de43b44fb44545cf",
+    "run_log_1": "890bd9adeb347191c758e4d5238ca6093fcf52a1158e1d9467cc1e2f428c6877",
+    "run_log_2": "72b64ba5e0091ae562f1d29c94e185239b2e36f4126502fc701b26f36a5ceb1c",
+    "verifier": "827fc3779f85fef458fd7546d8c7ad2c62785384433487311216dcc8b1d0c53e"
+  },
+  "evidence": {
+    "manifest": "docker-seeded-reproduction-manifest-20261108.json",
+    "report": "docker-seeded-reproduction-report-20261108.md",
+    "run_log_1": "../work/docker-seeded-repro-20261108/docker-run-log-1.json",
+    "run_log_2": "../work/docker-seeded-repro-20261108/docker-run-log-2.json",
+    "verifier": "../work/verify_manifest.py"
+  },
+  "freeze_rule": "Do not overwrite this record or its referenced evidence. New executions receive a new record_id and timestamp."
+}

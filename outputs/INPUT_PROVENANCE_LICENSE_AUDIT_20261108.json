@@ -1,0 +1,38 @@
+{
+  "audit_id": "jma-gpm-input-provenance-license-20261108",
+  "status": "PUBLIC_DATA_LICENSE_UNCONFIRMED",
+  "decision": "Do not redistribute the input CSVs in a public release until authoritative license and redistribution permission are recorded.",
+  "inputs": {
+    "jma": {
+      "file": "jma_independent_events_12station_daily_v2.csv",
+      "sha256": "e3cdb24f08f8bd65f5ffafac40d771592869fd1843999f0cbd6510739c7eb7f9",
+      "observed_source_urls": [
+        "https://www.data.jma.go.jp/stats/etrn/view/daily_a1.php?prec_no=46&block_no=0390&year=2018&month=9&day=&view=p1",
+        "https://www.data.jma.go.jp/stats/etrn/view/daily_a1.php?prec_no=46&block_no=0387&year=2018&month=9&day=&view=p1"
+      ],
+      "provenance_evidence": "CSV source_url and page_sha256 columns; local acquisition/audit artifacts dated 2026-10-04/2026-10-05.",
+      "version": "v2 corrected exploratory input; exact upstream page revision not recorded",
+      "acquisition_date": "2026-10-04 to 2026-10-05 recorded in local acquisition artifact names; exact per-row retrieval timestamp not established",
+      "license": "UNCONFIRMED",
+      "redistribution": "UNCONFIRMED",
+      "public_action": "Publish source URLs and fetch-and-verify instructions, or obtain permission before distributing CSV."
+    },
+    "gpm": {
+      "file": "gpm_independent_events_11station_30min_complete.csv",
+      "sha256": "6d7b1e467c293da2966c200a60d6f9e3639e1ccf7702fd0076c84e1e305a7a86",
+      "observed_source_file_pattern": "3B-HHR.MS.MRG.3IMERG.*.HDF5",
+      "observed_acquisition_evidence": "independent_event_acquisition_manifest_20261004_v1.json and local GPM acquisition/audit scripts",
+      "version": "GPM IMERG V07B source-file pattern observed; exact upstream collection citation and release record not yet attached to the package",
+      "acquisition_date": "2026-10-04 recorded in local acquisition artifact names",
+      "license": "UNCONFIRMED",
+      "redistribution": "UNCONFIRMED",
+      "public_action": "Publish a source-fetch procedure with required Earthdata authentication, or distribute only a legally cleared fixture."
+    }
+  },
+  "blocking_evidence": {
+    "acquisition_manifest": "The local manifest records GPM as BLOCKED_EXTERNAL_EARTHDATA_TOKEN_REQUIRED and formal_pass=false.",
+    "data_license_files_found": false,
+    "public_release_allowed": false
+  },
+  "formal_pass": false
+}

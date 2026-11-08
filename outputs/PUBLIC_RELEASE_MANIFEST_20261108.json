@@ -1,0 +1,32 @@
+{
+  "release_id": "jma-gpm-v2-code-docker-no-input-csv-20261108",
+  "status": "PUBLIC_CODE_PACKAGE_READY_INPUT_DATA_EXCLUDED",
+  "formal_pass": false,
+  "included": [
+    "README.md",
+    "Dockerfile",
+    "requirements-lock.txt",
+    "ENVIRONMENT.md",
+    "PUBLIC_REPRODUCTION_GUIDE.md",
+    "EXTERNAL_REPRODUCTION_QUICKSTART.md",
+    "FETCH_AND_VERIFY_INPUTS.md",
+    "DATA_AND_LICENSES.md",
+    "LICENSE_VERIFICATION_SOURCES_20261108.md",
+    "work/verify_manifest.py",
+    "work/compare_external_execution.py",
+    "work/freeze_execution_record.py",
+    "outputs/docker-seeded-reproduction-manifest-20261108.json",
+    "outputs/THIRD_PARTY_REPRODUCTION_PACKAGE_INDEX_20261108.json"
+  ],
+  "excluded": [
+    "JMA input CSV",
+    "GPM input CSV",
+    "Earthdata credentials and tokens",
+    "original private acquisition logs"
+  ],
+  "input_hashes_for_fetch_and_verify": {
+    "jma_independent_events_12station_daily_v2.csv": "e3cdb24f08f8bd65f5ffafac40d771592869fd1843999f0cbd6510739c7eb7f9",
+    "gpm_independent_events_11station_30min_complete.csv": "6d7b1e467c293da2966c200a60d6f9e3639e1ccf7702fd0076c84e1e305a7a86"
+  },
+  "publication_rule": "Do not publish the input CSVs until redistribution permission is documented. Use fetch-and-verify or a separately licensed fixture."
+}
