@@ -1,0 +1,32 @@
+{
+  "case_id": "jma-gpm-v2-docker-seeded-20261108",
+  "status": "REPRODUCED_WITH_FORMAL_PASS_FALSE",
+  "formal_pass": false,
+  "docker": {
+    "tag": "nova-dti-jma-gpm:2026-11-08",
+    "image_id": "sha256:95b3a0735f8104ed500a8e38041b68809152c5b9aa51bbc0f20694020e7c2262",
+    "base": "python:3.12.8-slim-bookworm",
+    "python": "3.12.8"
+  },
+  "seed": 20261108,
+  "execution_order": ["recompute_jma_gpm_v2.py", "bootstrap_v2_seeded.py", "downstream_v2.py"],
+  "expected_structure": {
+    "matched_daily_records": 81,
+    "event_station_groups": 27,
+    "events": 3,
+    "stations": 9,
+    "bootstrap_replicates": 2000
+  },
+  "input_sha256": {
+    "jma": "e3cdb24f08f8bd65f5ffafac40d771592869fd1843999f0cbd6510739c7eb7f9",
+    "gpm": "6d7b1e467c293da2966c200a60d6f9e3639e1ccf7702fd0076c84e1e305a7a86"
+  },
+  "output_sha256": {
+    "bootstrap_seeded": "d554b1856868d38ad12577b679ad34709c46b12facc99dfb3d57ed768822e201"
+  },
+  "comparison_policy": {
+    "frozen_outputs": "byte-for-byte equality",
+    "future_numeric_extensions": "absolute and relative tolerance 1e-12 unless overridden by a new manifest"
+  },
+  "claim_boundary": "Fixed Docker exploratory reproduction only; not calibration, formal validation, causal inference, or observational discovery."
+}
