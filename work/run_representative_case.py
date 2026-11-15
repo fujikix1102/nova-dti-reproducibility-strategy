@@ -18,7 +18,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 
-DEFAULT_CODE = Path("/Users/fujikijunichi/Documents/Codex/2026-09-27/new-chat")
+DEFAULT_CODE = Path("/opt/nova-code")
 DEFAULT_BASE = Path("/Volumes/1tbinside/NOVA/external_data/real_events")
 
 

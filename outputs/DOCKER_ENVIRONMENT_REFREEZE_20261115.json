@@ -1,0 +1,53 @@
+{
+  "manifest_type": "append_only_docker_environment_refreeze",
+  "record_id": "20261115-current-image-001",
+  "source_frozen_manifest": "jma-gpm-v2-docker-seeded-20261108",
+  "source_frozen_manifest_sha256": "625b554ed5df1aa4971e7d4366c2b4822a8bf87b371205b19eb82d1fea291f68",
+  "status": "SELF_REPRODUCTION_PASS_NEW_IMAGE_THIRD_PARTY_UNVERIFIED",
+  "docker": {
+    "tag": "nova-dti-jma-gpm:2026-11-08",
+    "image_id": "sha256:c4ae30777a9fb185e424823fd37abec65cae9bf1f0ca8ba9714870c7d1259fa2",
+    "base": "python:3.12.8-slim-bookworm",
+    "architecture": "arm64",
+    "os": "linux"
+  },
+  "code_sha256": {
+    "recompute_jma_gpm_v2.py": "b9a346164abdb6e2ed8cdf1727fc71f92aca3e35b444a34827215b95327dea47",
+    "bootstrap_v2.py": "435e38945343aa8f6e775c0f553b88df6cd78d39eccc94cb911cc93506d0e110",
+    "downstream_v2.py": "761e6aeb6a6a7e91d344ef3d920d1677b462a54102d04ebf8a2267a2bcc52e3d"
+  },
+  "input_sha256": {
+    "jma": "e3cdb24f08f8bd65f5ffafac40d771592869fd1843999f0cbd6510739c7eb7f9",
+    "gpm": "6d7b1e467c293da2966c200a60d6f9e3639e1ccf7702fd0076c84e1e305a7a86"
+  },
+  "expected": {
+    "matched_daily_records": 81,
+    "event_station_groups": 27,
+    "events": 3,
+    "stations": 9,
+    "bootstrap_replicates": 2000,
+    "seed": 20261108,
+    "formal_pass": false,
+    "bootstrap_output_sha256": "d554b1856868d38ad12577b679ad34709c46b12facc99dfb3d57ed768822e201"
+  },
+  "observed_self_run": {
+    "status": "PASS",
+    "runtime_wall_seconds": 9.26,
+    "docker_log_sha256": "ce5232a55254d1c0b6b5f610ac432415e41fe90bbcd0ea4f12e4150687652d85",
+    "output_sha256": {
+      "jma_gpm_daily_jst_aligned_v2.csv": "a2b90f85d2418e635440b8284f65717b22e44623539bc36899e46aa5770397f5",
+      "jma_gpm_daily_v2_audit.json": "b96843a50103708718cf6bb5310e06e4386e14bbb9549d716781311368fae084",
+      "jma_gpm_daily_v2_event_bootstrap.json": "d554b1856868d38ad12577b679ad34709c46b12facc99dfb3d57ed768822e201",
+      "jma_gpm_daily_v2_downstream_audit.json": "38760b2c0dfd12d0be9848249efc7f2b00a6ca02e0f3e9d586477191e5304232"
+    },
+    "formal_pass": false
+  },
+  "tolerance": {
+    "bootstrap_bytes": 0,
+    "numeric": "not defined"
+  },
+  "third_party_execution_observed": false,
+  "execution_status": "COMPLETED_WITH_CURRENT_IMAGE_ID",
+  "blocking_reason": "The prior image ID is unavailable locally. This append-only record fixes the current image ID and does not alter the prior manifest.",
+  "promotion_rule": "This record supersedes the unavailable image ID only for a new append-only environment record. It does not certify third-party reproduction or formal physical verification."
+}

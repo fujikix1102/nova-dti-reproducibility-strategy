@@ -13,6 +13,9 @@
 - bootstrap replicates: 2,000
 - random seed: `20261108`
 - `formal_pass`: `false`
+- expected bootstrap SHA-256: `d554b1856868d38ad12577b679ad34709c46b12facc99dfb3d57ed768822e201`
+
+Deterministic output tolerance is exactly 0 bytes. Numeric tolerance is not defined. JMA/GPM input CSVs are not included; an execution without the expected input hashes is `UNVERIFIED`.
 
 ## 1. Dockerイメージを作る
 
@@ -63,8 +66,12 @@ python3 work/verify_manifest.py \
 
 終了コード`0`かつ出力`"status": "PASS"`なら、manifestに対する入力・コード・出力・構造・ログの検証が通っている。欠損、SHA-256不一致、構造不一致、`formal_pass`の変更は失敗として扱う。
 
+The append-only current-image record is [DOCKER_ENVIRONMENT_REFREEZE_20261115.json](outputs/DOCKER_ENVIRONMENT_REFREEZE_20261115.json). It records a self-reproduction with the current image ID and does not claim third-party reproduction.
+
 ## 5. 証跡
 
 - 固定条件：[docker-seeded-reproduction-manifest-20261108.json](outputs/docker-seeded-reproduction-manifest-20261108.json)
 - 実行結果：[docker-seeded-reproduction-report-20261108.md](outputs/docker-seeded-reproduction-report-20261108.md)
 - Docker設定：[Dockerfile](Dockerfile)
+- 第三者向け手順：[EXTERNAL_REPRODUCTION_QUICKSTART.md](EXTERNAL_REPRODUCTION_QUICKSTART.md)
+- 第三者報告様式：[REPRODUCTION_REPORT_TEMPLATE.md](REPRODUCTION_REPORT_TEMPLATE.md)

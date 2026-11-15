@@ -16,13 +16,13 @@ docker build --tag nova-dti-jma-gpm:2026-11-08 .
 
 ```bash
 docker run --rm \
-  -v /Users/fujikijunichi/Documents/Codex/2026-09-27/new-chat:/opt/nova-code:ro \
-  -v /Volumes/1tbinside/NOVA:/Volumes/1tbinside/NOVA:ro \
-  -v "$PWD/work:/opt/repro/work" \
+  -v "$PWD/repro-root/code:/opt/nova-code:ro" \
+  -v "$PWD/repro-root/nova:/Volumes/1tbinside/NOVA" \
+  -v "$PWD/repro-root:/mnt/repro" \
   nova-dti-jma-gpm:2026-11-08 \
   --code-dir /opt/nova-code \
   --base-dir /Volumes/1tbinside/NOVA/external_data/real_events \
-  --log /opt/repro/work/docker-run-log.json
+  --log /mnt/repro/docker-run-log.json
 ```
 
 現行の処理スクリプトは出力を書き込むため、上記の完全読み取り専用実行は入力確認で停止する可能性がある。実際の再現実行では、入力アーカイブをコピーした検証用作業領域だけを読み書き可能にし、原本を直接マウントしない。
