@@ -75,3 +75,9 @@ The append-only current-image record is [DOCKER_ENVIRONMENT_REFREEZE_20261115.js
 - Docker設定：[Dockerfile](Dockerfile)
 - 第三者向け手順：[EXTERNAL_REPRODUCTION_QUICKSTART.md](EXTERNAL_REPRODUCTION_QUICKSTART.md)
 - 第三者報告様式：[REPRODUCTION_REPORT_TEMPLATE.md](REPRODUCTION_REPORT_TEMPLATE.md)
+
+## 6. 1クリック数値監査デモ
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/fujikix1102/nova-dti-reproducibility-strategy/blob/main/notebooks/01_cholesky_vs_inverse_benchmark.ipynb)
+
+The notebook compares explicit covariance inversion with a Cholesky solve on deterministic positive-definite matrices. It records the runtime environment, completes a well-conditioned identity check, and runs a condition-number stress test. It is a numerical benchmark only; it does not claim physical validation, universal superiority, or third-party reproduction of a full CosmoSIS run.
